@@ -3,10 +3,11 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'hello-world',
-  template: `
-    <h2>Hello World</h2>
-    <p>This is my first Component</p>
-  `,
+  templateUrl: './hello-world.component.html',
+  //   template: `
+  //     <h2>Hello World</h2>
+  //     <p>This is my first Component</p>
+  //   `,
   styles: [
     `
       h2,
@@ -18,4 +19,7 @@ import { Component } from '@angular/core';
 })
 export class HelloWorldComponent {
   // The code in this class drives the component's behavior.
+  title = 'Learn Angular';
+  image = '../assets/angular.png';
+  active = true;
 }

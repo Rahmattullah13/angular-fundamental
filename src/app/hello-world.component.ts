@@ -22,4 +22,8 @@ export class HelloWorldComponent {
   title = 'Learn Angular';
   image = '../assets/angular.png';
   active = true;
+
+  hello(name: String) {
+    alert(`Hello, ${name}!!!`);
+  }
 }

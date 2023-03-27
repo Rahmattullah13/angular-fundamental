@@ -1,4 +1,10 @@
 <img [src]="image" width="100px" />
-<p>{{ title.toUpperCase() }}</p>
+<h2>{{ title.toUpperCase() }}</h2>
 <p>This is my first Component</p>
+
 <button [disabled]="active">Edit</button>
+<p>
+    <button (click)="hello('Angular')">Angular</button>
+    <button (click)="hello('Vue JS')">Vue Js</button>
+    <button (click)="hello('React')">React</button>
+</p>

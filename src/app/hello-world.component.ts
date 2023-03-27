@@ -1,5 +1,6 @@
 import { style } from '@angular/animations';
 import { Component } from '@angular/core';
+import { Logger } from './logger.service';
 
 @Component({
   selector: 'hello-world',
@@ -22,9 +23,17 @@ export class HelloWorldComponent {
   title = 'Learn Angular';
   image = '../assets/angular.png';
   active = false;
+  counter = 0;
+
+  constructor(private logger: Logger) {}
+
+  increment() {
+    this.logger.writeCount(this.counter)
+    this.counter++;
+  }
 
   onEditClick() {
-    this.active = !this.active
+    this.active = !this.active;
   }
 
   hello(name: String) {

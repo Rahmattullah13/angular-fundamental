@@ -1,6 +1,7 @@
 <img [src]="image" width="100px" />
 <h2>{{ title.toUpperCase() }}</h2>
 <p>This is my first Component</p>
+<p>{{ counter }}</p>
 
 <!-- Jika nilai active nya adalah true maka text akan dirender tapi, jika nilai active nya false maka text tidak akan dirender. -->
 <div *ngIf="active; else noEdit">
@@ -10,6 +11,7 @@
   <p>text berikut hanya bisa dibaca. Coba tekan tombolnya.</p>
 </ng-template>
 <button (click)="onEditClick()">Edit</button>
+<button (click)="increment()">counter +</button>
 <p>
   <button (click)="hello('Angular')">Angular</button>
   <button (click)="hello('Vue JS')">Vue Js</button>

@@ -2,9 +2,16 @@
 <h2>{{ title.toUpperCase() }}</h2>
 <p>This is my first Component</p>
 
-<button [disabled]="active">Edit</button>
+<!-- Jika nilai active nya adalah true maka text akan dirender tapi, jika nilai active nya false maka text tidak akan dirender. -->
+<div *ngIf="active; else noEdit">
+  <p [contentEditable]="active">Kamu bisa edit text berikut ini...</p>
+</div>
+<ng-template #noEdit>
+  <p>text berikut hanya bisa dibaca. Coba tekan tombolnya.</p>
+</ng-template>
+<button (click)="onEditClick()">Edit</button>
 <p>
-    <button (click)="hello('Angular')">Angular</button>
-    <button (click)="hello('Vue JS')">Vue Js</button>
-    <button (click)="hello('React')">React</button>
+  <button (click)="hello('Angular')">Angular</button>
+  <button (click)="hello('Vue JS')">Vue Js</button>
+  <button (click)="hello('React')">React</button>
 </p>

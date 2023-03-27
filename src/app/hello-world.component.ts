@@ -21,7 +21,11 @@ export class HelloWorldComponent {
   // The code in this class drives the component's behavior.
   title = 'Learn Angular';
   image = '../assets/angular.png';
-  active = true;
+  active = false;
+
+  onEditClick() {
+    this.active = !this.active
+  }
 
   hello(name: String) {
     alert(`Hello, ${name}!!!`);
